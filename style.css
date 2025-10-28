@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --color-bg: #050508;
+    --color-text: #a0a0a0;
+    --color-signal: #00bfff;
+    --color-noise: #ff0033;
+    --color-border: rgba(0, 187, 255, 0.2);
+    --font-sans: 'Exo 2', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+}
+
+.bg-grid {
+    background-image:
+        linear-gradient(to right, rgba(0, 187, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 187, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: pan-grid 60s linear infinite;
+}
+
+@keyframes pan-grid {
+    0% { background-position: 0 0; }
+    100% { background-position: 1200px 1200px; }
+}
+
+.text-signal {
+    color: var(--color-signal);
+    text-shadow: 0 0 8px rgba(0, 187, 255, 0.5);
+}
+
+.text-noise {
+    color: var(--color-noise);
+    text-shadow: 0 0 8px rgba(255, 0, 51, 0.5);
+}
+
+/* Glitch Text Effect */
+.glitch-text {
+    position: relative;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(0, 187, 255, 0.3);
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--color-noise);
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--color-signal), 2px 2px var(--color-noise);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% { clip: rect(42px, 9999px, 44px, 0); }
+    20% { clip: rect(12px, 9999px, 60px, 0); }
+    40% { clip: rect(50px, 9999px, 102px, 0); }
+    60% { clip: rect(70px, 9999px, 85px, 0); }
+    80% { clip: rect(30px, 9999px, 56px, 0); }
+    100% { clip: rect(90px, 9999px, 95px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+    0% { clip: rect(2px, 9999px, 98px, 0); }
+    25% { clip: rect(78px, 9999px, 100px, 0); }
+    50% { clip: rect(56px, 9999px, 40px, 0); }
+    75% { clip: rect(34px, 9999px, 20px, 0); }
+    100% { clip: rect(10px, 9999px, 110px, 0); }
+}
+
+.scroll-target {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-black text-center text-white uppercase tracking-widest;
+    text-shadow: 0 0 10px rgba(0, 187, 255, 0.2);
+}
+
+.mechanic-card {
+    @apply bg-gray-900/20 border border-gray-800/80 rounded-xl p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:border-signal hover:shadow-2xl hover:shadow-signal/10 hover:-translate-y-2;
+}
+
+.card-icon-wrapper {
+    @apply w-16 h-16 rounded-lg flex items-center justify-center mb-6;
+}
+
+.card-title {
+    @apply text-xl md:text-2xl font-bold text-white mb-4;
+}
+
+.card-text {
+    @apply text-gray-400 leading-relaxed;
+}
+
+pre {
+    @apply bg-transparent p-0;
+}
+
+.viral-item {
+    @apply px-4 py-2 border border-gray-700 rounded-md bg-gray-900/50;
+}

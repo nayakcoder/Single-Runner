@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal Runner | The Digital Cold War</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-gray-300 font-sans overflow-x-hidden">
+
+    <div id="app" class="relative">
+
+        <!-- Background Grid -->
+        <div class="fixed top-0 left-0 w-full h-full bg-grid z-0"></div>
+
+        <main class="relative z-10">
+            <!-- HERO SECTION -->
+            <section id="hero" class="h-screen w-full flex flex-col items-center justify-center text-center p-4 relative overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://r2.flowith.net/files/png/ACQ0C-signal_runner_hero_image_index_0@1024x1024.png');">
+                    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+                </div>
+                <div class="relative z-10">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-white glitch-text" data-text="Signal Runner">Signal Runner</h1>
+                    <p class="mt-4 md:mt-6 text-xl md:text-2xl text-signal font-mono tracking-widest">In the Digital Cold War, Trust is a Weapon.</p>
+                </div>
+                <div class="absolute bottom-10 animate-bounce">
+                    <i data-lucide="arrow-down" class="w-8 h-8 text-gray-500"></i>
+                </div>
+            </section>
+
+            <!-- THE CONCEPT -->
+            <section id="concept" class="scroll-target container mx-auto py-20 md:py-32 px-6 lg:px-8">
+                <h2 class="section-title">The Concept</h2>
+                <div class="max-w-4xl mx-auto mt-12 text-lg md:text-xl text-center leading-relaxed space-y-6">
+                    <p>
+                        Welcome to the <span class="text-white font-bold">Echo Chamber</span>, a minimalist data-space where survival depends on influence. Signal Runner is a high-tempo, session-based social deduction game of cyber-espionage.
+                    </p>
+                    <p>
+                        In each 5-minute match, a single truth—the <span class="text-signal font-bold">Signal</span>—is released. Simultaneously, a rogue AI warden, <span class="text-white font-bold">Eris</span>, and hidden human players, the <span class="text-noise font-bold">Phantoms</span>, flood the network with convincing fakes—the <span class="text-noise font-bold">Noise</span>.
+                    </p>
+                    <p>
+                        As a <span class="text-signal font-bold">Runner</span>, you must identify the Signal and amplify it before time runs out. The core question isn't "is this source credible?" but <span class="text-white font-bold">"is the player telling me this trying to save me or kill me?"</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- CORE MECHANICS -->
+            <section id="mechanics" class="scroll-target container mx-auto py-20 md:py-32 px-6 lg:px-8">
+                <h2 class="section-title">Core Mechanics</h2>
+                <div class="max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: The Signal Grid -->
+                    <div class="mechanic-card">
+                        <div class="card-icon-wrapper bg-blue-500/10 text-signal">
+                            <i data-lucide="layout-grid" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="card-title">The Signal Grid</h3>
+                        <p class="card-text">
+                            The game is played on a visual grid of "Data Nodes". Players spend action points in a rapid, visual tug-of-war to find the truth, not read logs. Actions include <span class="text-signal">AMPLIFY</span>, <span class="text-noise">JAM</span>, and <span class="text-white">SHIELD</span>.
+                        </p>
+                    </div>
+                    <!-- Card 2: Strategic AI -->
+                    <div class="mechanic-card">
+                        <div class="card-icon-wrapper bg-red-500/10 text-noise">
+                             <i data-lucide="siren" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="card-title">Eris, The Strategic Catalyst</h3>
+                        <p class="card-text">
+                            The adversarial AI, Eris, is not random. It acts as a predictable yet formidable "raid boss," targeting influential players and forming consensus to create dramatic, king-slayer moments that test the network's integrity.
+                        </p>
+                    </div>
+                    <!-- Card 3: The Ghost Action -->
+                    <div class="mechanic-card md:col-span-2 lg:col-span-1">
+                         <div class="card-icon-wrapper bg-purple-500/10 text-purple-400">
+                             <i data-lucide="ghost" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="card-title">The "Ghost" Action</h3>
+                        <p class="card-text">
+                            Using ZK-proofs, players can perform one anonymous action per game. Amplify or Jam a node with your identity shielded from all players—and from Eris. This high-stakes move creates incredible moments of doubt and surprise.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI & CYPHERPUNK ETHOS -->
+            <section id="ai-ethos" class="scroll-target container mx-auto py-20 md:py-32 px-6 lg:px-8">
+                <h2 class="section-title">AI & The Cypherpunk Ethos</h2>
+                <div class="max-w-4xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="text-lg space-y-4">
+                        <p>Eris is not a black-box LLM. It's a <span class="text-white font-bold">rule-based, verifiable AI</span> whose logic can be audited. This ensures fairness and makes the AI a strategic opponent, not a random troll.</p>
+                        <p>The game embodies cypherpunk principles of privacy and decentralization. The <span class="text-purple-400 font-bold">ZK-powered "Ghost" action</span> provides a tool for privacy, while the long-term vision is a fully trustless, player-owned game running on Solana.</p>
+                    </div>
+                    <div class="p-4 border border-blue-900/50 bg-gray-900/20 rounded-lg font-mono text-sm">
+                        <pre class="language-js"><code><span class="text-gray-500">// Eris AI Logic (Simplified)</span>
+<span class="text-purple-400">function</span> <span class="text-signal">eris_turn</span>(<span class="text-yellow-400">gameState</span>) {
+  <span class="text-purple-400">const</span> <span class="text-red-400">influential</span> = <span class="text-signal">findMostInfluential</span>(<span class="text-yellow-400">gameState</span>);
+  <span class="text-purple-400">const</span> <span class="text-red-400">consensus</span> = <span class="text-signal">findStrongestNode</span>(<span class="text-yellow-400">gameState</span>);
+
+  <span class="text-purple-400">if</span> (<span class="text-red-400">consensus</span>.<span class="text-yellow-400">charge</span> > THRESHOLD) {
+    <span class="text-gray-500">// Attack forming consensus</span>
+    <span class="text-purple-400">return</span> <span class="text-noise">createJamAction</span>(<span class="text-red-400">consensus</span>.<span class="text-yellow-400">id</span>);
+  } <span class="text-purple-400">else</span> {
+    <span class="text-gray-500">// Create chaos via top player</span>
+    <span class="text-purple-400">return</span> <span class="text-noise">createDeceptionFor</span>(<span class="text-red-400">influential</span>.<span class="text-yellow-400">id</span>);
+  }
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+             <!-- VIRAL LOOP -->
+            <section id="viral-loop" class="scroll-target container mx-auto py-20 md:py-32 px-6 lg:px-8">
+                <h2 class="section-title">The Viral Engine</h2>
+                <div class="max-w-4xl mx-auto mt-12 text-center">
+                    <p class="text-lg md:text-xl leading-relaxed">
+                        We replaced the "Proof-of-Cringe" NFT with the <span class="text-white font-bold">"Signal Crest"</span>—a dynamic, evolving status symbol that fuels a powerful internal viral loop.
+                    </p>
+                    <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-lg font-mono tracking-wider">
+                        <div class="flex items-center gap-3"><span class="viral-item">Play</span><i data-lucide="arrow-right" class="text-gray-600"></i></div>
+                        <div class="flex items-center gap-3"><span class="viral-item">Win</span><i data-lucide="arrow-right" class="text-gray-600"></i></div>
+                        <div class="flex items-center gap-3"><span class="viral-item text-signal">Evolve Crest</span><i data-lucide="arrow-right" class="text-gray-600"></i></div>
+                        <div class="flex items-center gap-3"><span class="viral-item">Flex Crest</span><i data-lucide="arrow-right" class="text-gray-600"></i></div>
+                        <span class="viral-item text-white">Attract New Players</span>
+                    </div>
+                    <p class="mt-12 text-gray-400 max-w-2xl mx-auto">
+                        The Crest is a generative art piece that visually evolves with your success. Winning as a Runner adds <span class="text-signal">blue crystalline layers</span>; winning as a Phantom adds <span class="text-noise">sharp red accents</span>. A mature Crest is an undeniable public signal of skill, driving engagement and attracting new players.
+                    </p>
+                </div>
+            </section>
+
+            <!-- THE VISION -->
+            <section id="vision" class="scroll-target container mx-auto py-20 md:py-32 px-6 lg:px-8">
+                <h2 class="section-title">The Vision</h2>
+                <div class="max-w-4xl mx-auto mt-12 text-lg md:text-xl text-center leading-relaxed space-y-6">
+                    <p>
+                        Our strategy is <span class="text-white font-bold">"Niche to Win, Design to Expand."</span> We will first capture the cypherpunk community—the 10,000 smartest users on Solana who will most appreciate our core mechanics.
+                    </p>
+                    <p>
+                        With them, we build a fortress. From that base, we expand. The core gameplay of fast-paced social deduction is universally appealing.
+                    </p>
+                    <p class="text-2xl md:text-3xl font-bold text-white tracking-wide pt-8">
+                        We're not just building a game. We're building a new platform for trust, designed to scale and solve problems for billions.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center py-8 border-t border-gray-900 text-gray-600 relative z-10">
+            <p>&copy; 2025 Signal Runner. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
